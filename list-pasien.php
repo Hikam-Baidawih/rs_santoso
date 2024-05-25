@@ -37,15 +37,14 @@
             while ($pasien = mysqli_fetch_array($query)) {
                 echo "<tr>";
 
-                echo "<td>" . $pasien['nama'] . "</td>";
-                echo "<td>" . $pasien['alamat'] . "</td>";
-                echo "<td>" . $pasien['jenis_kelamin'] . "</td>";
-                echo "<td>" . $pasien['tanggal_lahir'] . "</td>";
+                echo "<td>{$pasien['nama']}</td>";
+                echo "<td>{$pasien['alamat']}</td>";
+                echo "<td>{$pasien['jenis_kelamin']}</td>";
+                echo "<td>{$pasien['tanggal_lahir']}</td>";
 
                 echo "<td>";
-                echo "<a href='form-edit.php?id=" . $pasien['id'] . "'>Edit</a> | 
-";
-                echo "<a href='hapus.php?id=" . $pasien['id'] . "'>Hapus</a>";
+                echo "<a href='form-edit.php?id={$pasien["id"]}'>Edit</a> | ";
+                echo "<a href='hapus.php?id={$pasien["id"]}'>Hapus</a>";
                 echo "</td>";
 
                 echo "</tr>";
